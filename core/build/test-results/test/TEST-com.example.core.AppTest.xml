@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.core.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-28T16:11:22" hostname="LiZongrongs-MacBook-Pro.local" time="0.002">
+  <properties/>
+  <testcase name="shouldAnswerWithTrue" classname="com.example.core.AppTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
