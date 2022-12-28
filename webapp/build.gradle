@@ -3,11 +3,39 @@
  */
 
 plugins {
-    id 'com.example.java-conventions'
+    id 'java-library'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
 }
 
 dependencies {
-    api project(':core')
+    implementation ("com.example:parent")
+    api 'com.example:core:1.0.0'
 }
 
+group = 'com.example'
+version = '1.0.0'
 description = 'webapp'
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
+}

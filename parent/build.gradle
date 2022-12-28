@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.11'
+    api 'junit:junit:4.11'
 }
 
 group = 'com.example'
